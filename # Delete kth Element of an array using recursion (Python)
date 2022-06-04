@@ -1,0 +1,16 @@
+# Delete kth Element of an array using recursion (Python)
+
+def delete(arr,k):
+    if(k==1):
+        arr.pop()
+        return arr
+    temp=arr[-1]
+    arr.pop()
+    delete(arr,k-1)
+    arr.append(temp)
+    return arr
+    
+arr=[1,2,3,4,5]
+k=3
+x=delete(arr,k)
+print(x)
